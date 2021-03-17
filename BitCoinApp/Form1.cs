@@ -39,6 +39,15 @@ namespace BitCoinApp
                 float result = Int32.Parse(amountOfCoinBox.Text) * bitcoin.bpi.USD.rate_float;
                 resultTextBox.Text = $"{result.ToString()} {bitcoin.bpi.USD.code}";
             }
+
+            if (currencyCombo.SelectedItem.ToString() == "GBP")
+            {
+                resultLabel.Visible = true;
+                resultTextBox.Visible = true;
+                BitCoinRates bitcoin = GetRates();
+                float result = Int32.Parse(amountOfCoinBox.Text) * bitcoin.bpi.GBP.rate_float;
+                resultTextBox.Text = $"{result.ToString()} {bitcoin.bpi.GBP.code}";
+            }
         }
 
         public static BitCoinRates GetRates()

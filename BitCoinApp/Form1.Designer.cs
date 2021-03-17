@@ -43,7 +43,8 @@ namespace BitCoinApp
             this.currencyCombo.FormattingEnabled = true;
             this.currencyCombo.Items.AddRange(new object[] {
             "EUR",
-            "USD"});
+            "USD",
+            "GBP"});
             this.currencyCombo.Location = new System.Drawing.Point(104, 113);
             this.currencyCombo.Name = "currencyCombo";
             this.currencyCombo.Size = new System.Drawing.Size(121, 21);
